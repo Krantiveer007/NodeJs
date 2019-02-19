@@ -27,36 +27,36 @@ var path = require('path');
 
 
 var readData = function (path) {
-    try{
-        var data = fs.readFile(path, 'utf8');
-    }
-    catch{
-        console.log('Requested File not Found : ' + path);
-    }
+    var data = fs.readFileSync(path, 'utf8');
+    // var data = require(path);
     return data ? data : {};
+    // return  data  ? data : {};
 }
 //fs.readFile method is by default async
 //fs.readFileSync method is by default Sync
 //require : it needs the server restart if any changes are made to resource file.
 var server = http.createServer(function (req, res) {
-    
-    console.log(req.url);
-    
-    var data = readData('.'+ req.url);
-    var abspath = fs.existsSync(req.url);
-    varpathValue = path.extname(req.url).substring(1);
-    console.log(path.extname(req.url).substring(1));
-    if (varpathValue == 'json'){
-        varpathValue = 'application/' + varpathValue;
-        console.log(varpathValue);
+
+    var absPath = req.url.substring(1, req.url.length);
+    if (fs.existsSync(absPath)) {
+
+        var data = readData(absPath);
+        varpathValue = path.extname(absPath);
+
+        if (varpathValue == 'json') {
+            varpathValue = 'application/' + varpathValue;
+        } else if (varpathValue == 'html') {
+            varpathValue = 'text/' + varpathValue;
+        }
+
+        res.writeHead(200, {
+            'Content-Type': varpathValue
+        });
+        res.end(data); //res.end needs to pass a string
+    } else {
+        console.log(absPath + ' File not found');
+        res.end();
     }
-    else if (varpathValue == 'html'){
-        varpathValue = 'text/' + varpathValue;
-        console.log(varpathValue);
-    }
-    
-    res.writeHead(200, { 'Content-Type': varpathValue });
-    res.end(data); //res.end needs to pass a string
 });
 
 server.listen(8080);

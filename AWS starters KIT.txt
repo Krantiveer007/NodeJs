@@ -1,0 +1,28 @@
+Step by step guide for GET and POST data from Dynamo using NodeJS Lambda 
+
+https://thewebspark.com/2018/07/04/how-to-get-and-post-data-from-dynamodb-table-using-node-js-and-aws-lambdaserverless-function/
+
+http://zonov.me/building-an-amazon-lambda-function-to-write-to-the-dynamodb/
+
+last option to use :
+
+https://medium.com/the-node-js-collection/building-your-first-serverless-app-in-node-js-with-aws-lambda-s3-api-gateway-4d87e808d9cc
+
+Lambda code to write in dynamo :
+
+'use strict';
+var AWS = require('aws-sdk'),
+uuid = require('uuid'),
+documentClient = new AWS.DynamoDB.DocumentClient();
+exports.writeMovie = function(event, context, callback){
+var params = {
+Item : {
+"id" : uuid.v1(),
+"Name" : event.name
+},
+TableName : process.env.TABLE_NAME
+};
+documentClient.put(params, function(err, data){
+callback(err, data);
+});
+} 

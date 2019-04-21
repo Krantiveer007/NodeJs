@@ -1,0 +1,864 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+
+.container-fluid {
+    padding-right: 40px !important;
+    padding-left: 40px !important;
+   
+}
+
+body {
+   background: #e6e6e6;
+    font-family: "Neuzeit Grotesk Regular", Arial, Helvetica, sans-serif !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+textarea{
+    resize: none!important;
+        color: #333!important
+}
+
+:root {
+    --ma-row-height: 30px; 
+}
+
+/*@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");*/
+
+html{
+   background: white;
+}
+
+.k-datepicker .k-select, .k-timepicker .k-select, .k-datetimepicker .k-select {
+display:none !important
+}
+.modal-content{
+border-radius: 0px!important;
+width: 75%!important;
+}
+
+.k-dateinput-wrap .k-input, .k-dropdown-wrap .k-input, .k-picker-wrap .k-input, .k-numeric-wrap .k-input {
+    font-size: 13px !important;
+    width: 100%;
+    font-family: "Neuzeit Grotesk Regular", Arial, Helvetica, sans-serif !important;
+    font-weight: normal !important;
+    text-align: center;
+    height: 30px !important;
+    
+}
+
+.k-autocomplete, .k-flatcolorpicker .k-color-value, .k-combobox .k-dropdown-wrap, .k-datepicker .k-picker-wrap, .k-timepicker .k-picker-wrap, .k-datetimepicker .k-picker-wrap, .k-dateinput .k-dateinput-wrap, .k-textbox, .k-textarea, .k-input.k-textbox, .k-multiselect-wrap, .k-numerictextbox .k-numeric-wrap {
+    border-color: #dadada!important
+}
+
+/*.failedSearch .k-autocomplete, .k-flatcolorpicker .k-color-value, .k-combobox .k-dropdown-wrap, .k-datepicker .k-picker-wrap, .k-timepicker .k-picker-wrap, .k-datetimepicker .k-picker-wrap, .k-dateinput .k-dateinput-wrap, .k-textbox, .k-textarea, .k-input.k-textbox, .k-multiselect-wrap, .k-numerictextbox .k-numeric-wrap {
+    border-color: #dc3545!important
+}*/
+.ng-dropdown-panel.ng-select-bottom {
+     border-bottom-right-radius: 0px !important; 
+     border-bottom-left-radius: 0px !important; 
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked{
+    color: white !important
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-disabled{
+    color: black !important
+}
+
+.ng-dropdown-panel.ng-select-bottom .ng-dropdown-panel-items .ng-option:last-child {
+     border-radius: 0px !important
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option{
+    padding: 5px!important
+}
+
+/*view Meeting*/
+.mv2-form-label {
+    font-weight: 700;
+    font-size: 12px;
+    font-family: Neuzeit Grotesk Bold;
+    color: #979da6;
+    margin-bottom: 7px;
+}
+
+.form-control {
+    font-size: 14px !important;
+}
+
+::placeholder, .mv2-placeholder {
+    color: #a8adb5!important;
+    opacity: 1;
+    font-family: Neuzeit Grotesk Regular!important;
+    font-size: 14px!important;
+    font-style: italic!important;
+}
+
+.mv2-page-heading {
+    margin: 0 var(--ma-row-height) 5px;
+    padding: 17px 0;
+    text-transform: none;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    margin-bottom: 21px;
+    list-style: none;
+}
+
+.mv2-page-heading--item {
+    font-family: Neuzeit Grotesk Bold;
+    font-size: 14pt;
+    color: #20242b;
+}
+
+.input-sm {
+    height: var(--ma-row-height) !important;
+}
+select.input-sm {
+    line-height: normal;
+    background-size: 14px 10px;
+    background-position: right 0 center;
+    padding: 4px 12px;
+}
+
+.input-sm {
+    border-radius: 0 !important;
+}
+
+.input-sm {
+    transition: border-color .3s ease;
+    background: #fff;
+    border: 1px solid #dadada;
+    color: #20242b;
+    font-family: Neuzeit Grotesk Bold;
+    padding: 8px 29px 8px 12px;
+    font-style: normal;
+}
+
+.ag-header-row {
+    font-family: Neuzeit Grotesk Bold;
+    color: #979da6;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.ag-theme-balham {
+    font-size: 14px;
+}
+
+.ag-body-viewport {
+    font-family: Neuzeit Grotesk Regular;
+    color: #515b6b;
+}
+
+.ag-theme-balham .ag-cell {
+    line-height: 2.2;
+}
+
+/*viewMeetingend*/
+
+.form-control.is-invalid{
+   border: 1px solid red!important;
+   background-image: none!important;
+   padding-right: .75rem!important;
+
+}
+
+
+
+.divTimeSetterContainer .button-time-control{
+    float: right !important;
+}
+
+.failedSearch{
+    border-color: #dc3545!important;
+    }
+
+
+.searchErrorResponse{
+    height: 30px;
+    font-size: 12px;
+    padding: 5px!important;
+    font-weight: bold;
+    z-index: 1;
+    margin-bottom: 0px!important;
+    border-radius: 0!important;
+}
+
+.failedSearch .dropdown-menu{
+    display : none!important;
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option .highlighted {
+    text-decoration: none !important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active{
+    background-color: #008cba!important;
+    border: 1px solid #008cba!important;
+}
+
+.ng-select.ng-select-single .ng-select-container{
+    box-shadow: none!important
+}
+.btn-primary {
+   
+    background-color: #008cba!important;
+    border-color: #008cba!important;
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked{
+     background-color: #008cba!important;
+    border-color: #008cba!important;   
+}
+
+/*.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected{
+background-color: white!important;
+}*/
+
+.divTimeSetterContainer input.timePart {
+    font-size: 12px!important;
+    font-weight: normal!important;
+    border-radius: 3px!important;
+}
+
+.ngSelectPicker{
+    font-size: 12px!important;
+}
+.divTimeSetterContainer span.hourSymbol, .divTimeSetterContainer span.minuteSymbol {
+    margin: 5px 2px 0px!important;
+    font-size: 12px!important;
+}
+
+.divTimeSetterContainer input.minutes {
+    width: 15px!important;
+    text-align: center!important;
+}
+.divTimeSetterContainer span.timeDelimiter {
+    float: left;
+    font-size: 15px!important;
+    margin: 2px 2px!important;
+}
+
+
+.ui-widget.ui-widget-content {
+    width: 27em !important;
+    height: 28% !important;
+    margin: 0px !important;
+}
+
+.timePicker .form-control {
+    border-radius: 0px !important;
+    height: 30px !important;
+    font-size: 12px!important;
+    border: 1px solid #dadada!important
+}
+
+  .timePicker .bs-timepicker-field {
+        width : 69px;
+    }
+
+    .durationPicker .divTimeSetterContainer .button-time-control div.updownButton{
+        height : 15px !important;
+    }
+
+    .modal.fade {
+        display: flex !important;
+        align-items: center;
+    }
+    .modal-dialog {
+        vertical-align:middle;
+    }
+    .modal-content {
+        width: 100%!important;
+    }
+   
+.form-control:focus{
+    box-shadow: none!important
+}
+    .ng-select .ng-select-container{
+    height: 30px !important;
+    min-height: 30px !important;
+    border-radius: 0px !important;
+    font-size: 12px !important;
+    border: 1px solid #dadada!important
+    }
+
+  @font-face{
+      font-family: 'Neuzeit Grotesk Light';
+      src: url(assets/fonts/NeuzeitGro-Lig.woff) ;
+  }
+
+  @font-face{
+    font-family: 'Glyphicons Halflings';
+    src: url(assets/fonts/glyphicons-halflings-regular.woff) ;
+ }
+
+  @font-face{
+    font-family: 'Neuzeit Grotesk Bold';
+    src: url(assets/fonts/NeuzeitGro-Bol.woff) ;
+}
+@font-face{
+    font-family: 'Neuzeit Grotesk Regular';
+    src: url(assets/fonts/NeuzeitGro-Reg.woff) ;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    
+    }
+    
+    .glyphicon-triangle-top:before {
+        content: "\e253";
+    }
+    
+    .glyphicon-triangle-bottom:before {
+        content: "\e252";
+    }
+.container-fluid{
+    padding: 0px!important;   
+    width: 100vw;
+    height: 100vh;
+}
+
+.row{
+    padding: 0px!important;
+    margin: 0px!important;
+}
+
+.dropdown-menu{
+    min-width: 23.5%!important;
+    padding: 0px!important;
+    border-radius: 0!important;
+    font-size: 15px!important;
+}
+.dropdown-item.active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #008cba!important;
+}
+
+     .durationPicker .divTimeSetterContainer .timeValueBorder{
+        border-radius: 0px !important;
+        font-size: 14px !important;
+        padding: 0px !important;
+        height: 30px !important;
+        border: 1px solid #dadada!important;
+        width: 123%
+    }
+
+ .failedSearch .divTimeSetterContainer .timeValueBorder {
+        border-radius: 0px !important;
+        font-size: 14px !important;
+        padding: 0px !important;
+        height: 30px !important;
+        border: 1px solid #dc3545!important;
+        width: 123%
+}
+
+@media only screen and (min-width: 1024px){
+    .tooltip{
+        width: 25%!important;
+    }
+    .tooltip-inner{
+        max-width: 100%!important;
+        width:auto!important;
+    }
+    .ui-widget.ui-widget-content{
+    width: 27em !important;
+    height: 37% !important;
+    margin:0px !important
+}
+ .timePicker .bs-timepicker-field {
+        width : 40px;
+    }
+
+    .divTimeSetterContainer input.hours{
+        width: 13px !important
+    }
+
+
+.durationPicker .divTimeSetterContainer .timeValueBorder {
+    border-radius: 0px !important;
+    font-size: 14px !important;
+    padding: 0px !important;
+    height: 30px !important;
+    border: 1px solid #dadada!important;
+    width: 111%;
+}
+
+ .failedSearch .divTimeSetterContainer .timeValueBorder {
+    border-radius: 0px !important;
+    font-size: 14px !important;
+    padding: 0px !important;
+    height: 30px !important;
+    border: 1px solid #dc3545!important;
+    width: 111%;
+}
+
+     .divTimeSetterContainer{
+margin: 0px!important
+ }
+
+/*.ngSelectPicker .ng-select .ng-select-container{
+         width: 106% !important;
+ }*/
+}
+
+@media only screen and (min-width: 1280px){
+.timePicker .bs-timepicker-field {
+    width: 52px;
+    }
+    .ui-widget.ui-widget-content{
+    width: 27em !important;
+    height: 45% !important;
+    margin:0px !important
+}
+
+}
+
+
+@media only screen and (min-width: 1366px){
+    .tooltip{
+        width: 25%!important;
+    }
+    .tooltip-inner{
+        max-width: 100%!important;
+        width:auto!important;
+    }
+    .timePicker .bs-timepicker-field {
+        width : 59px;
+    }
+
+    .durationPicker .divTimeSetterContainer .timeValueBorder{
+    border: 1px solid #dadada!important;
+    height : 30px !important;
+    border-radius: 0px !important;
+    font-size: 12px;
+    width: 125%
+    
+}
+
+    .failedSearch .divTimeSetterContainer .timeValueBorder{
+    border: 1px solid #dc3545!important;
+    height : 30px !important;
+    border-radius: 0px !important;
+    font-size: 12px;
+    width: 125%
+    
+}
+
+.divTimeSetterContainer input.hours {
+    width: 35px !important;
+}
+
+.ui-widget.ui-widget-content{
+    width: 27em !important;
+    height: 27% !important;
+    margin:0px !important
+}
+
+ .divTimeSetterContainer{
+margin: 0px!important
+ }
+
+   .ng-select .ng-select-container{
+    height: 30px !important;
+    min-height: 30px !important;
+    border-radius: 0px !important;
+    font-size: 12px !important;
+    border: 1px solid #dadada!important
+    }
+  /*.ng-select .ng-select-container{
+         width: 100%;
+ }*/
+}
+@media only screen and (min-width: 1920px){
+    .tooltip{
+        width: auto!important;
+    }
+    .tooltip-inner{
+        max-width: 100%!important;
+        width:auto!important;
+    }
+    .ui-widget.ui-widget-content {
+    width: 27em !important;
+    height: 31% !important;
+    margin: 0px !important;
+}
+
+.failedSearch{
+   border-color: #dc3545!important;
+}
+
+.divTimeSetterContainer input.hours {
+    width: 38px !important;
+}
+
+ .durationPicker .divTimeSetterContainer .timeValueBorder {
+    border: 1px solid #dadada!important;
+    height : 30px !important;
+    border-radius: 0px !important;
+    font-size: 12px;
+    width: 120%
+    
+}
+
+  .failedSearch .divTimeSetterContainer .timeValueBorder {
+    border: 1px solid #dc3545!important;
+    height : 30px !important;
+    border-radius: 0px !important;
+    font-size: 12px;
+    width: 120%
+    
+}
+
+.timePicker .bs-timepicker-field {
+        width : 69px;
+    }
+
+    .durationPicker .divTimeSetterContainer .button-time-control div.updownButton{
+        height : 15px !important;
+    }
+
+
+    .ng-select .ng-select-container{
+    height: 30px !important;
+    min-height: 30px !important;
+    border-radius: 0px !important;
+    font-size: 12px !important;
+    border: 1px solid #dadada!important
+    }
+
+}
+
+/* .mv2-Invitees-Dtls .ag-root.ag-unselectable, .mv2-Invitees-Dtls .ag-body-viewport, .mv2-Invitees-Dtls .ag-center-cols-viewport, .mv2-Invitees-Dtls .ag-center-cols-container {
+    position:static;
+    }
+    
+    .mv2-Invitees-Dtls .ag-theme-balham .ag-row {
+    border-right: 1px solid #BDC3C7;
+    }  */
+ /*Ag-Grid CSS*/
+ .ag-row.ag-row-focus {
+    z-index: 1!important;
+    }
+    /*reason ?*/
+    /* .ag-cell {
+        overflow: visible !important; 
+    }  */
+    .ag-theme-balham .ag-popup-editor {
+        border-radius: 0px!important;
+        box-shadow: none!important;
+        padding: 0px!important;
+        height:28px!important;
+        width:200px!important;
+    }
+    .ag-theme-balham .ag-center-cols-container{
+        width: 100%!important;
+    }
+    .ag-theme-balham .ag-header{
+        color: #666666!important;
+        background-color: #e6e6e6!important;
+    }
+   
+/*Model CSS Aligning to Top right of ViewPort below Header*/
+.modal-dialog {
+    position: fixed !important;
+    right: -320px;
+    top: 60px !important;
+    margin: auto !important;
+    max-width: none!important;
+    width: auto !important;
+    transition: opacity 0.3s linear, right 0.3s ease-out !important;
+}
+
+.modal.show .modal-dialog {
+    right:0px !important;
+}
+@media only screen and (min-width: 1024px) {
+    .col-sl-1 {
+        flex: 0 0 4.16%!important;
+        max-width: 4.16%!important;
+        padding:5px!important;
+    }
+    .col-sl-2 {
+        flex: 0 0 8.33%!important;
+        max-width: 8.33%!important;
+        padding:5px!important;
+    }
+    .col-sl-3 {
+        flex: 0 0  12.50%!important;
+        max-width:  12.50%!important;
+        padding:5px!important;
+        
+    }
+    .col-sl-4 {
+        flex: 0 0  16.66%!important;
+        max-width:  16.66%!important;
+        padding:5px!important;
+        
+    }
+    .col-sl-5 {
+        flex: 0 0 20.83%!important;
+        max-width: 20.83%!important;
+        padding:5px!important;
+    }
+    .col-sl-6 {
+        flex: 0 0 25%!important;
+        max-width: 25%!important;
+        padding:5px!important;
+    }
+    .col-sl-7 {
+        flex: 0 0 29.16%!important;
+        max-width: 29.16%!important;
+        padding:5px!important;
+    }
+    .col-sl-8 {
+        flex: 0 0 33.33%!important;
+        max-width: 33.33%!important;
+        padding:5px!important;
+    }
+    .col-sl-9 {
+        flex: 0 0 37.5%!important;
+        max-width: 37.5%!important;
+        padding:5px!important;
+    }
+    .col-sl-10 {
+        flex: 0 0 41.66%!important;
+        max-width: 41.66%!important;
+        padding:5px!important;
+    }
+    .col-sl-11 {
+        flex: 0 0 45.83%!important;
+        max-width: 45.83%!important;
+        padding:5px!important;
+    }
+    .col-sl-12 {
+        flex: 0 0 50%!important;
+        max-width: 50%!important;
+        padding:5px!important;
+    }
+    .col-sl-13 {
+        flex: 0 0 54.16%!important;
+        max-width: 54.16%!important;
+        padding:5px!important;
+    }
+    .col-sl-14 {
+        flex: 0 0 58.33%!important;
+        max-width: 58.33%!important;
+        padding:5px!important;
+    }
+    .col-sl-15 {
+        flex: 0 0 62.5%!important;
+        max-width: 62.5%!important;
+        padding:5px!important;
+    }
+    .col-sl-16 {
+        flex: 0 0 66.66%!important;
+        max-width: 66.66%!important;
+        padding:5px!important;
+    }
+    .col-sl-17 {
+        flex: 0 0 70.83%!important;
+        max-width: 70.83%!important;
+        padding:5px!important;
+    }
+    .col-sl-18 {
+        flex: 0 0 75%!important;
+        max-width: 75%!important;
+        padding:5px!important;
+    }
+    .col-sl-19 {
+        flex: 0 0 79.16%!important;
+        max-width: 79.16%!important;
+        padding:5px!important;
+    }
+    .col-sl-20 {
+        flex: 0 0 83.33%!important;
+        max-width: 83.33%!important;
+        padding:5px!important;
+    }
+    .col-sl-21 {
+        flex: 0 0 87.5%!important;
+        max-width: 87.5%!important;
+        padding:5px!important;
+    }
+    .col-sl-22 {
+        flex: 0 0 91.66%!important;
+        max-width: 91.66%!important;
+        padding:5px!important;
+    }
+    .col-sl-23 {
+        flex: 0 0 95.83%!important;
+        max-width: 95.83%!important;
+        padding:5px!important;
+    }
+    .col-sl-24 {
+        flex: 0 0 100%!important;
+        max-width: 100%!important;
+        padding:5px!important;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    .col-1 {
+        flex: 0 0 3.33%!important;
+        max-width: 3.33%!important;
+        padding:5px!important;
+    }
+    .col-2 {
+        flex: 0 0 6.66%!important;
+        max-width: 6.66%!important;
+        padding:5px!important;
+    }
+    .col-3 {
+        flex: 0 0  9.99%!important;
+        max-width:  9.99%!important;
+        padding:5px!important;
+        
+    }
+    .col-4 {
+        flex: 0 0 13.33%!important;
+        max-width:  13.33%!important;
+        padding:5px!important;
+        
+    }
+    .col-5 {
+        flex: 0 0 16.66%!important;
+        max-width: 16.66%!important;
+        padding:5px!important;
+    }
+    .col-6 {
+        flex: 0 0 19.99%!important;
+        max-width: 19.99%!important;
+        padding:5px!important;
+    }
+    .col-7 {
+        flex: 0 0 23.33%!important;
+        max-width: 23.33%!important;
+        padding:5px!important;
+    }
+    .col-8 {
+        flex: 0 0 26.66%!important;
+        max-width: 26.66%!important;
+        padding:5px!important;
+    }
+    .col-9 {
+        flex: 0 0 29.99%!important;
+        max-width: 29.99%!important;
+        padding:5px!important;
+    }
+    .col-10 {
+        flex: 0 0 33.33%!important;
+        max-width: 33.33%!important;
+        padding:5px!important;
+    }
+    .col-11 {
+        flex: 0 0 36.66%!important;
+        max-width: 36.66%!important;
+        padding:5px!important;
+    }
+    .col-12 {
+        flex: 0 0 39.99%!important;
+        max-width: 39.99%!important;
+        padding:5px!important;
+    }
+    .col-13 {
+        flex: 0 0 43.33%!important;
+        max-width: 43.33%!important;
+        padding:5px!important;
+    }
+    .col-14 {
+        flex: 0 0 46.66%!important;
+        max-width: 46.66%!important;
+        padding:5px!important;
+    }
+    .col-15 {
+        flex: 0 0 50%!important;
+        max-width: 50%!important;
+        padding:5px!important;
+    }
+    .col-16 {
+        flex: 0 0 53.33%!important;
+        max-width: 53.33%!important;
+        padding:5px!important;
+    }
+    .col-17 {
+        flex: 0 0 56.66%!important;
+        max-width: 56.66%!important;
+        padding:5px!important;
+    }
+    .col-18 {
+        flex: 0 0 59.99%!important;
+        max-width: 59.99%!important;
+        padding:5px!important;
+    }
+    .col-19 {
+        flex: 0 0 63.33%!important;
+        max-width: 63.33%!important;
+        padding:5px!important;
+    }
+    .col-20 {
+        flex: 0 0 66.66%!important;
+        max-width: 66.66%!important;
+        padding:5px!important;
+    }
+    .col-21 {
+        flex: 0 0 69.99%!important;
+        max-width: 69.99%!important;
+        padding:5px!important;
+    }
+    .col-22 {
+        flex: 0 0 73.33%!important;
+        max-width: 73.33%!important;
+        padding:5px!important;
+    }
+    .col-23 {
+        flex: 0 0 76.66%!important;
+        max-width: 76.66%!important;
+        padding:5px!important;
+    }
+    .col-24 {
+        flex: 0 0 79.99%!important;
+        max-width: 79.99%!important;
+        padding:5px!important;
+    }
+    .col-25 {
+        flex: 0 0 83.33%!important;
+        max-width: 83.33%!important;
+        padding:5px!important;
+    }
+    .col-26 {
+        flex: 0 0 86.66%!important;
+        max-width: 86.66%!important;
+        padding:5px!important;
+    }
+    .col-27 {
+        flex: 0 0 89.99%!important;
+        max-width: 89.99%!important;
+        padding:5px!important;
+    }
+    .col-28 {
+        flex: 0 0 93.33%!important;
+        max-width: 93.33%!important;
+        padding:5px!important;
+    }
+    .col-29 {
+        flex: 0 0 96.66%!important;
+        max-width: 96.66%!important;
+        padding:5px!important;
+    }
+    .col-30 {
+        flex: 0 0 100%!important;
+        max-width: 100%!important;
+        padding:5px!important;
+    }
+}
